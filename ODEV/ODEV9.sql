@@ -10,13 +10,14 @@
 */
 
 -- 1. SORU
-Select city.city, country.country From country
-Left Join city on city.country_id = country.country_id;
+Select country , city From country 
+Inner join city on country.country_id = city.country_id 
+Order By country ASC
 
 -- 2. SORU
-Select payment.payment_id, customer.first_name, customer.last_name From customer
-Right Join payment on payment.customer_id = customer.customer_id;
+Select payment_id , first_name , last_name From customer 
+Join payment on payment.customer_id = customer.customer_id;
 
 -- 3. SORU
-Select customer.payment_id, customer.first_name,customer.last_name From customer
-Right Join rental on rental.customer_id = customer.customer_id;
+Select rental_id , first_name , last_name From rental 
+Join customer on rental.customer_id = customer.customer_id;
